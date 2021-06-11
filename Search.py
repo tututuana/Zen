@@ -72,6 +72,11 @@ def searchZen (query):
 		query = query.replace("google", "")
 		for j in search(query, tld="co.in", num=10, stop=10, pause=2):
 			return j
+
+	if "browser" in query:
+		query = query.replace("browser", "")
+		webbrowser.open_new("https://google.com")
+		return "Browser opened."
     
 	#Temp
 
