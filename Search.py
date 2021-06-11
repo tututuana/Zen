@@ -76,7 +76,7 @@ def searchZen (query):
 	#Temp
 
 	if query == "what is the date" or query == "what's the date" or query == "date":
-		date = datetime.datetime.now().strftime("%d/%m/%Y")
+		date = datetime.datetime.now().strftime("%m/%d/%Y")
 
 		return f"The date is {date}"
 
