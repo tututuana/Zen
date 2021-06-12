@@ -1,0 +1,9 @@
+{
+	"wolfram_key": "Your API key here",
+	"reminders": [
+		{
+			"name": "Math Test",
+			"time": 12010
+		}
+	]
+}
