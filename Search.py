@@ -150,7 +150,7 @@ def copyOutput ():
 	pyperclip.copy(get_value("Output"))
 
 def clear():
-	set_value("Output", "")
+	set_value("Output", "Please Enter Query")
 
 def openb():
 	webbrowser.open_new(get_value("Output"))
