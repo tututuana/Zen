@@ -172,7 +172,7 @@ with dpg.window(label="Search Window", pos=[0, 0], no_close=True, no_collapse=Tr
     dpg.add_button(label="Open Result", callback=openb)
 
 with dpg.window(label="Results Window", pos=[0, 268], no_close=True, no_collapse=True, no_move=True, no_resize=True, width=284, height=268):
-    dpg.add_text("Output", wrap=250)
+    dpg.add_text("Output", wrap=250 , id=output_id)
 
 dpg.set_value(output_id, "Please Enter Query")
 
