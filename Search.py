@@ -1,16 +1,11 @@
 import datetime
 import json
-import os
 import PyDictionary
 import pyperclip
 import random
 import re
-import requests
-import subprocess
-import time
 import webbrowser
 import wikipedia
-import win10toast
 import wolframalpha
 from googlesearch import search
 import dearpygui.dearpygui as dpg
@@ -21,7 +16,6 @@ preprocessingData = json.load(open("data/preprocessingData.json"))
 dictionary = PyDictionary.PyDictionary()
 wolfram = wolframalpha.Client(functionalityData["wolfram_key"])
 
-# generate uuids (just to go with your existing code)
 query_id = dpg.generate_uuid()
 output_id = dpg.generate_uuid()
 
