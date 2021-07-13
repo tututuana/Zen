@@ -33,6 +33,13 @@ def searchZen(query):
 
     for contraction, expansion in preprocessingData["contractions"].items():
         query = query.replace(contraction, expansion)
+        
+    # Commands that require punctuation go here.
+    if "r/" in query:
+        query = re.sub(".*r\/", "", query)
+        query = query.replace("_", "")
+        webbrowser.open_new("https://www.reddit.com/r/" + query)
+        return "Reddit page opened."
 
     query = re.sub(r'[^\w\s]', '', query)
 
@@ -89,12 +96,6 @@ def searchZen(query):
         response = wolfram.query(query)
 
         return next(response.results).text
-
-    if "r/" in query:
-        query = re.sub(".*r\/", "", query)
-        query = query.replace("_", "")
-        webbrowser.open_new("https://www.reddit.com/r/" + query)
-        return "Reddit page opened."
 
     if "google" in query:
         query = query.replace("google", "")
